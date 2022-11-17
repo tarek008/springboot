@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.data.repository.query.Param;
 
 import tn.esprit.persistance.Contrat;
+import tn.esprit.persistance.Etudiant;
 
 public interface ContratService {
 	List<Contrat> retrieveAllContrats();
@@ -23,5 +24,6 @@ public interface ContratService {
 	void dropAllContratsEveryYear();
     int dropcontratdunjour();
     
+    Etudiant assigncontratToEtudiant(int idcontrat, int idEtudiant ); 
     
 }

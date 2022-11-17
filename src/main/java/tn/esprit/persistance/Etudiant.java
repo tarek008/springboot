@@ -42,7 +42,6 @@ public class Etudiant implements Serializable {
 	@Enumerated(EnumType.STRING) 
 	private Option option ;
 	@OneToMany(mappedBy = "etudiant")
-	
 	private Set<Contrat> contrat; 
 	@ManyToOne
 	private Departement departement ; 

@@ -18,7 +18,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import lombok.extern.slf4j.Slf4j;
 import tn.esprit.persistance.Contrat;
+import tn.esprit.persistance.Etudiant;
 import tn.esprit.services.Interfaces.ContratService;
+import tn.esprit.services.Interfaces.EquipeService;
 @RestController
 @RequestMapping("ContartController")
 @Slf4j
@@ -67,5 +69,9 @@ public class ContratController {
 		 log.info("deleting ... ");
 		 return contserv.dropcontratdunjour();
 	 }
-
+ 
+	@PutMapping("assignContratToEtudiantByID/{idcontrat}/{idetudiant}")
+	public Etudiant assigncontratToEtudiant(@PathVariable("idcontrat") int idcontrat,@PathVariable("idetudiant") int idEtudiant) {
+		return contserv.assigncontratToEtudiant(idcontrat, idEtudiant);
+	}
 }

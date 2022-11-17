@@ -13,12 +13,15 @@ import lombok.extern.slf4j.Slf4j;
 import tn.esprit.persistance.Contrat;
 import tn.esprit.persistance.Etudiant;
 import tn.esprit.persistance.repositories.ContratRepository;
+import tn.esprit.persistance.repositories.EtudiantRepository;
 import tn.esprit.services.Interfaces.ContratService;
  @Service
  @Slf4j
 public class ContratServiceImplementation implements ContratService {
 @Autowired
 ContratRepository contratrep; 
+@Autowired
+EtudiantRepository etudrep; 
 	@Override
 	public List<Contrat> retrieveAllContrats() {
 		log.info(" getting contrats ...");
@@ -75,6 +78,15 @@ ContratRepository contratrep;
 	@Scheduled(fixedRate = 6000)
 	public int dropcontratdunjour() {
 	 return	contratrep.dropcontratdunjour();
+	}
+
+	@Override
+	public Etudiant assigncontratToEtudiant(int idcontrat, int idEtudiant) {
+     Etudiant e=etudrep.findById(idEtudiant).get(); 
+     Contrat c =contratrep.findById(idcontrat).get(); 
+     c.setEtudiant(e);
+     contratrep.save(c);
+	return e;
 	}
 	
 /*
