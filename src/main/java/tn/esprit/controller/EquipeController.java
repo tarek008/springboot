@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import tn.esprit.persistance.Equipe;
+import tn.esprit.persistance.Etudiant;
 import tn.esprit.persistance.repositories.EquipeRepository;
 import tn.esprit.services.Interfaces.EquipeService;
 
@@ -57,9 +58,16 @@ public class EquipeController {
 	 equipeserv.DeleteEquipe(id);
  }
  
- @GetMapping("getAllEquipes")
- public List<Equipe> getAllEquipes(){
-	 return equiprep.getAllEquipe();
+ 
+ @PutMapping("affecterDetailsToEquipe/{idEquipe}/{Iddetails}")
+ public Equipe affecterDetailsToEquipe(@PathVariable("idEquipe") int IdEquipe,@PathVariable("Iddetails") int IdDetailEquipe) {
+	 return equipeserv.affecterDetailsToEquipe(IdEquipe, IdEquipe);
+ }
+ 
+ @PutMapping("assignEquipeEtudiant/{idequipe}/{idetudiant}")
+ public Etudiant assignEquipeToEtudiant(@PathVariable("idequipe") int idEquipe,@PathVariable("idetudiant") int idEtudiant) {
+	 return equipeserv.assignEquipeToEtudiant(idEquipe, idEtudiant);
+	 
  }
  
 }

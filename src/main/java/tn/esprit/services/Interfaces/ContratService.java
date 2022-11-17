@@ -22,4 +22,6 @@ public interface ContratService {
 	
 	void dropAllContratsEveryYear();
     int dropcontratdunjour();
+    
+    
 }
