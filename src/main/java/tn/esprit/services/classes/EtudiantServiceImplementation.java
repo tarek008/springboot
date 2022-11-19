@@ -57,7 +57,6 @@ public class EtudiantServiceImplementation implements EtudiantService {
 	      log.info("saving new values ...");
 	    
 	    	  log.info("save"+e);
-	    	
 	    	  
 	    	  return etudrep.save(e);
    
@@ -65,7 +64,7 @@ public class EtudiantServiceImplementation implements EtudiantService {
 
 	@Override
 	public Etudiant retrieveEtudiant(Integer idEtudiant) {
-		return etudrep.findById(idEtudiant).get();
+		return etudrep.findById(idEtudiant).orElseThrow();
 	}
 
 	@Override

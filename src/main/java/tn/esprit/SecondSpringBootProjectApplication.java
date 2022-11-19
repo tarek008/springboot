@@ -2,19 +2,17 @@ package tn.esprit;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @SpringBootApplication
+@EnableAspectJAutoProxy
 public class SecondSpringBootProjectApplication {
 
 	public static void main(String[] args) {
-		try {
 		SpringApplication.run(SecondSpringBootProjectApplication.class, args);
-		}catch (Exception e) {
-			log.error("open appache server  and mysql or see trace of exception  " );
-			e.getStackTrace();
-		}
+	
 	}
 
 }

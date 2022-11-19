@@ -46,7 +46,6 @@ public class EtudiantController {
    
   @GetMapping("/DisplayEtudiantById/{id}")
   public Etudiant displayEtudiantByID(@PathVariable("id") int id) {
-	  
 	  return etudserv.retrieveEtudiant(id); 
 	  }
   

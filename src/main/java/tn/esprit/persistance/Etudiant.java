@@ -45,9 +45,7 @@ public class Etudiant implements Serializable {
 	private Set<Contrat> contrat; 
 	@ManyToOne
 	private Departement departement ; 
-    
 	@ManyToMany(mappedBy = "etudiants")
-        @JsonIgnore
      private Set<Equipe> equipe; 
 	// @Enumerated(EnumType.STRING)
 	//private Option op;
@@ -144,9 +142,7 @@ public class Etudiant implements Serializable {
 	@Override
 	public String toString() {
 		return "Etudiant [idEtudiant=" + idEtudiant + ", prenomE=" + prenomE + ", nomE=" + nomE + ", date_naissance="
-				+ date_naissance + ", option=" + option + ", contrat="
-				+ contrat + ", departement=" + departement + ", equipe=" + equipe + ", getClass()=" + getClass()
-				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+				+ date_naissance + ", option=" + option + ", departement=" + departement + "]";
 	}
 
 	
