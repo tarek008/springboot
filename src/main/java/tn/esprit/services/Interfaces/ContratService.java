@@ -23,7 +23,7 @@ public interface ContratService {
 	
 	void dropAllContratsEveryYear();
     int dropcontratdunjour();
-    
+    //
     Etudiant assigncontratToEtudiant(int idcontrat, int idEtudiant ); 
     
 }

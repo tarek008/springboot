@@ -42,7 +42,7 @@ public Equipe retrieveEquipe(Integer idEquipe) {
 	return  equiperep.findById(idEquipe).get();
 
 }
-
+//
 @Override
 public void DeleteEquipe(Integer idEquipe) {
 	equiperep.deleteById(idEquipe);

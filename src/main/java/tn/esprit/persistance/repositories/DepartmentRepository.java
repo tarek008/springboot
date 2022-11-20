@@ -15,3 +15,4 @@ public interface DepartmentRepository extends JpaRepository<Departement, Integer
 	List<Etudiant> getEtudiantsByDepartement (Integer idDepartement);
 
 }
+//

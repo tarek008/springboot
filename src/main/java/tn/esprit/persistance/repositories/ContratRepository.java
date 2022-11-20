@@ -23,3 +23,4 @@ public interface ContratRepository extends JpaRepository<Contrat, Integer>{
    /*  @Query("select sum(montantContrat) Beetween startDate= ?1 and endDate =?2 from Contrat c where c.archive =false")
 	public float getChiffreAffaireEntreDeuxDate(Date startDate, Date endDate);*/
 }
+//

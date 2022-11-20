@@ -137,7 +137,7 @@ public class Etudiant implements Serializable {
 		this.contrat = contrat;
 		this.departement = departement;
 		this.equipe = equipe;
-	 
+	 //
 	}
 	@Override
 	public String toString() {

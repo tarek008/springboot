@@ -14,3 +14,4 @@ public interface UniversityRepository extends JpaRepository<Universite, Integer>
     @Query("select u.departments from Universite u  where u.idUniv= ?1")
 	public List<Departement> retrieveDepartementsByUniversite(Integer idUniversite);
 }
+//

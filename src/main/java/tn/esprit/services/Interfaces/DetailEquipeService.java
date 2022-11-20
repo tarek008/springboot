@@ -12,3 +12,4 @@ public interface DetailEquipeService {
 	 public DetailEquipe upadateDetailEquipe(DetailEquipe detailEquipe);
 	 List<DetailEquipe> findByThematiqueLike(String thematique);
 	 }
+//

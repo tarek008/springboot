@@ -33,7 +33,7 @@ public class ContratController {
 	public List<Contrat> retrieveAllContrats() {
 		return contserv.retrieveAllContrats();
 	}
-
+//
 	@PutMapping("updateContrat")
 	public Contrat updateContrat(@RequestBody Contrat ce) {
 		return contserv.updateContrat(ce);

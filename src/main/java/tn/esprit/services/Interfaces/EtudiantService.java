@@ -18,7 +18,7 @@ public interface EtudiantService {
 	void removeEtudiant(Integer idEtudiant);
 	
 	int searchEtudiantBynomEtprenom(String nom ,String prenom );
-
+//
     Etudiant getEtudiantByNomE(String name);
     
     List<Etudiant> getAllEtudiantsBeginByNomE(String prefixe);

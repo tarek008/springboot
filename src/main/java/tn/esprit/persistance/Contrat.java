@@ -48,7 +48,7 @@ public Contrat(int idContrat, Date dateDebutContrat, Date dateFinContrat, Specia
 	this.montantContrat = montantContrat;
 	this.etudiant = etudiant;
 }
-
+//
 public Contrat() {
 
 }

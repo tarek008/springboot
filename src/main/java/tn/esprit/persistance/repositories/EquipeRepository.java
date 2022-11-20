@@ -14,5 +14,5 @@ public  interface EquipeRepository extends JpaRepository<Equipe,Integer> {
 			,nativeQuery=true)
 	public List<Equipe> getAllEquipe(); 
 
-	
+	//
 }

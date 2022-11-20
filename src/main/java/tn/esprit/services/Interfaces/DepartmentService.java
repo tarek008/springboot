@@ -14,5 +14,5 @@ public interface DepartmentService {
 
 	Departement retrieveDepartement (Integer idDepart);
 	List<Etudiant> getEtudiantsByDepartement (Integer idDepartement);
-
+//
 }

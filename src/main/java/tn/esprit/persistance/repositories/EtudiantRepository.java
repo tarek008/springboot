@@ -15,7 +15,7 @@ import tn.esprit.persistance.Equipe;
 import tn.esprit.persistance.Etudiant;
 @Repository
 public interface EtudiantRepository extends JpaRepository<Etudiant,Integer>{
-
+//
 
 	@Query(value="SELECT  * from etudiant LEFT JOIN equipe_etudiants ON etudiant.id_etudiant=equipe_etudiants.etudiants_id_etudiant"
 			+ "  LEFT JOIN equipe ON equipe_etudiants.equipe_id_equipe=equipe.id_equipe "

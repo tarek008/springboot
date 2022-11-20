@@ -12,3 +12,4 @@ public interface DetailEquipeRepository extends JpaRepository<DetailEquipe, Inte
 	    List<DetailEquipe> findByThematiqueLike(String thematique);
 
 }
+//

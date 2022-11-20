@@ -27,7 +27,7 @@ public class DetailEquipeController {
 	    private List<DetailEquipe> getAlldetailEquipes() {
 	        return detailEquipeService.getDetailEquipes();
 	    }
-
+//
 	    //creating a get mapping that retrieves the detail of a specific detailEquipe
 	    @PostMapping("/AddDetailEquipe")
 	    public DetailEquipe addDetailEquipe (@RequestBody DetailEquipe detailEquipe){

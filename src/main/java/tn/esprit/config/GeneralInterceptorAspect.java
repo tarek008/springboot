@@ -16,7 +16,7 @@ import tn.esprit.persistance.Etudiant;
 @Slf4j
 public class GeneralInterceptorAspect {
 
-	
+	//
 	@AfterThrowing(value= "execution(* tn.esprit.controller.*.*(..)) ",throwing = "e")
 	 void afterEtudiantretrieveByID(JoinPoint joinPoint,Exception e) {
 		log.info("Etudiant does not exist"+e.getMessage());	

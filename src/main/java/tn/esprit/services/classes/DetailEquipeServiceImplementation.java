@@ -21,7 +21,7 @@ public class DetailEquipeServiceImplementation implements DetailEquipeService{
 	    public DetailEquipe saveDetailEquipe(DetailEquipe detailEquipe){
 	        return detailEquipeRepository.save(detailEquipe);
 	    }
-	    
+	    //
 	    public List<DetailEquipe> saveDetailEquipes(List<DetailEquipe> detailEquipe){
 	        return detailEquipeRepository.saveAll(detailEquipe);
 	    }

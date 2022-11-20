@@ -15,3 +15,4 @@ public interface EquipeService {
 	Equipe affecterDetailsToEquipe(int IdEquipe, int IdDetailsEquipe);
     Etudiant assignEquipeToEtudiant(int idEquipe,int idEtudiant); 
 }
+//

@@ -19,7 +19,7 @@ import tn.esprit.persistance.Equipe;
 import tn.esprit.persistance.Etudiant;
 import tn.esprit.persistance.repositories.EquipeRepository;
 import tn.esprit.services.Interfaces.EquipeService;
-
+//
 @RestController
 @RequestMapping("/EquipeController")
 public class EquipeController {
