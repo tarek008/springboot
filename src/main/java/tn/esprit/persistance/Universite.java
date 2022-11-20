@@ -21,10 +21,7 @@ public class Universite implements Serializable{
 	private int idUniv ; 
 	private String nomUniv  ;
 	@OneToMany
-	
 	private Set<Departement> departments ;
-	
-	
 	
 	
 	public Universite() {
