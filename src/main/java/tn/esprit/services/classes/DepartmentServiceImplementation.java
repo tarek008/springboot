@@ -1,6 +1,7 @@
 package tn.esprit.services.classes;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -27,10 +28,15 @@ public class DepartmentServiceImplementation implements DepartmentService{
 	}
 
 	@Override
-	public Departement updateDepartement(Departement d) {
-		deprep.findById(d.getIdDepart()).get();
-		deprep.save(d);
-		return d;
+	public Departement updateDepartement(Integer id,String name) {
+		Optional<Departement> department = deprep.findById(id);
+		if(department.isPresent()) {
+			Departement dep = department.get();
+			dep.setNomDepart(name);
+			deprep.save(dep);
+			return dep;
+		}
+		return null;
 	}
 //
 	@Override
@@ -42,5 +48,13 @@ public class DepartmentServiceImplementation implements DepartmentService{
 	public List<Etudiant> getEtudiantsByDepartement(Integer idDepartement) {
 		return deprep.getEtudiantsByDepartement(idDepartement);
 	}
+
+	@Override
+	public void deleteDepartment(Integer idDepartement) {
+		 deprep.deleteById(idDepartement);
+		
+	}
+	
+	
 
 }

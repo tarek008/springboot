@@ -35,7 +35,7 @@ public class Departement implements Serializable{
 			super();
 			this.idDepart = idDepart;
 			this.nomDepart = nomDepart;
-			this.etudiants = etudiants;
+			//this.etudiants = etudiants;
 		}
 
 		
