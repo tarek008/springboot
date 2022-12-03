@@ -24,9 +24,11 @@ public class Departement implements Serializable{
 	    @Column(name="idDepartement")
 	    private Integer idDepart; // Clé primaire
 	    private String nomDepart;
-	      
-	     @OneToMany(mappedBy = "departement" ,cascade = CascadeType.ALL)
-	     private Set<Etudiant> etudiants ; 
+	    @OneToMany(mappedBy = "departement" ,cascade = CascadeType.ALL)
+	    private Set<Enseignant> enseignants;
+	    
+	    @OneToMany(mappedBy = "departement" ,cascade = CascadeType.ALL)
+	    private Set<Etudiant> etudiants ; 
 	     //
 		public Departement() {
 		}

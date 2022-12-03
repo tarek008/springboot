@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
 import tn.esprit.persistance.Departement;
+import tn.esprit.persistance.Enseignant;
 import tn.esprit.persistance.Etudiant;
 import tn.esprit.persistance.repositories.DepartmentRepository;
 import tn.esprit.services.Interfaces.DepartmentService;
@@ -48,6 +49,12 @@ public class DepartmentServiceImplementation implements DepartmentService{
 	public List<Etudiant> getEtudiantsByDepartement(Integer idDepartement) {
 		return deprep.getEtudiantsByDepartement(idDepartement);
 	}
+	
+	@Override
+	public List<Enseignant> getEnseignantsByDepartement(Integer idDepartement) {
+		return deprep.getEnseignantsByDepartement(idDepartement);
+	}
+
 
 	@Override
 	public void deleteDepartment(Integer idDepartement) {

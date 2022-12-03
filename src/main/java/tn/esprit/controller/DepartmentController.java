@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import tn.esprit.input.DepartementInput;
 import tn.esprit.persistance.Departement;
+import tn.esprit.persistance.Enseignant;
 import tn.esprit.persistance.Etudiant;
 import tn.esprit.services.Interfaces.DepartmentService;
 
@@ -58,6 +59,11 @@ public class DepartmentController {
 	@GetMapping("GetListOfEtudiantsByDepartment/{iddepartment}")
 	List<Etudiant> getEtudiantsByDepartment(@PathVariable("iddepartment") Integer iddep){
 		return depserv.getEtudiantsByDepartement(iddep);
+	}
+	
+	@GetMapping("GetListOfEnseignantByDepartment/{iddepartment}")
+	List<Enseignant> getEnseignantsByDepartment(@PathVariable("iddepartment") Integer iddep){
+		return depserv.getEnseignantsByDepartement(iddep);
 	}
 	
 	@DeleteMapping("DeleteDepartment/{iddepartment}")
