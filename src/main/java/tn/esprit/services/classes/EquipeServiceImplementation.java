@@ -1,6 +1,8 @@
 package tn.esprit.services.classes;
 
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,6 +13,7 @@ import tn.esprit.persistance.Etudiant;
 import tn.esprit.persistance.repositories.DetailEquipeRepository;
 import tn.esprit.persistance.repositories.EquipeRepository;
 import tn.esprit.persistance.repositories.EtudiantRepository;
+import tn.esprit.persistance.repositories.EquipeRepository.NameOnly;
 import tn.esprit.services.Interfaces.EquipeService;
 @Service
 public class EquipeServiceImplementation implements EquipeService {
@@ -28,6 +31,7 @@ public List<Equipe> retrieveAllEquipes() {
 
 @Override
 public Equipe addEquipe(Equipe e) {
+	e.setFav(0);
 	e=equiperep.save(e);
 	return e;
 }
@@ -65,6 +69,35 @@ public Etudiant assignEquipeToEtudiant(int idEquipe, int idEtudiant) {
      equiperep.save(eq);
 	return e;
 }
+
+@Override
+public List<Etudiant> getAllEtudiantsfromEquipe(int id) {
+	return equiperep.getAllEtudiantsfromEquipe(id);
+
+}
+
+@Override
+public Collection<NameOnly> countetudiantbyequipes() {
+	return equiperep.countetudiantbyequipes();
+}
+
+@Override
+public void favorite(int id) {
+	
+	  equiperep.favorite(id);
+}
+
+@Override
+public void unfavorite(int id) {
+	  equiperep.unfavorite(id);
+	
+}
+
+@Override
+public List<Equipe> myFavorites() {
+	return equiperep.myFavorites();
+}
+
 
 
 
