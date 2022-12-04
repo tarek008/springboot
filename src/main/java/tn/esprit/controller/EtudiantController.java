@@ -94,5 +94,11 @@ public class EtudiantController {
 	public Etudiant  addAndAssignEtudiantToEquipeAndContract(@ RequestBody Etudiant e ,@PathVariable("idcontrat") Integer idContrat,@PathVariable("idEquipe") Integer idEquipe) {
 		return etudserv.addAndAssignEtudiantToEquipeAndContract(e, idContrat, idEquipe);
 	}
+	
+	@GetMapping("getAllEtudiantsAges")
+	public List<Integer> getAllEtudiantAges() {
+		return etudserv.getAllEtudiantAges();
+	}
+
   }
 
