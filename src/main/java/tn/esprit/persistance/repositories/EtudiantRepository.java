@@ -33,5 +33,7 @@ public interface EtudiantRepository extends JpaRepository<Etudiant,Integer>{
 	@Query("update Etudiant e set e.departement.idDepart = ?2 where e.idEtudiant= ?1")
 	public void assignEtudiantToDepartement (Integer etudiantId, Integer departementId) ;
 	*/
-	
+	@Query(value="SELECT  DATE_FORMAT(CURRENT_DATE, '%Y') - DATE_FORMAT(date_naissance,'%Y') as 'age' FROM etudiant "
+			+ "",nativeQuery = true)
+	 public List<Integer> getAllEtudiantAges(); 
 }

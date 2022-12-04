@@ -26,4 +26,6 @@ public interface EtudiantService {
 	Contrat affectContratToEtudiant (Contrat ce,String  nomE ,String prenomE);
  
 	Etudiant addAndAssignEtudiantToEquipeAndContract(Etudiant e, Integer idContrat,Integer idEquipe);
+	 public List<Integer> getAllEtudiantAges(); 
+
 }

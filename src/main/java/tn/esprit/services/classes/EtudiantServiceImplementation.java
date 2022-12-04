@@ -121,6 +121,11 @@ public class EtudiantServiceImplementation implements EtudiantService {
 		return e;
 		
 	}
+
+	@Override
+	public List<Integer> getAllEtudiantAges() {
+		return etudrep.getAllEtudiantAges();
+	}
 	 
 
 	
