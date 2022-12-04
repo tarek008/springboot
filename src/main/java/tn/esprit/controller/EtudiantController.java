@@ -63,9 +63,9 @@ public class EtudiantController {
 		}
   
   @DeleteMapping("/deletestudent/{id}")
-  public String deleteStudentById(@PathVariable("id") int id){
-   etudserv.removeEtudiant(id);
-   return "deleted successfully"; 
+  public void deleteStudentById(@PathVariable("id") int id){
+     etudserv.removeEtudiant(id);
+  
    }
   
   @GetMapping("existenceByName/{name}")
